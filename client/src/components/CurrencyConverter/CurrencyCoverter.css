@@ -1,0 +1,130 @@
+/* src/components/CurrencyConverter.css */
+
+.currency-module {
+  background: linear-gradient(135deg, #002b5b, #004aad, #007bff);
+  padding: 35px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 800px;
+  color: #f0f4ff;
+  transition: all 0.4s ease-in-out;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+
+.currency-module h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Input + Button Group */
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  width: 160px;
+  font-size: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  color: #003366;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  background: #fff;
+  transform: scale(1.03);
+}
+
+.input-group button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00bcd4;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.input-group button:hover {
+  background: #0288d1;
+  transform: translateY(-2px);
+}
+
+/* Currency Info Box */
+.currency-info {
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 25px;
+  backdrop-filter: blur(6px);
+  color: #e9f0ff;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.currency-info h3 {
+  color: #ffeb3b;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.currency-info p {
+  margin: 6px 0;
+  color: #322e2e;
+  font-weight: bold;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #fff27a;
+  font-size: 1.1rem;
+}
+
+/* Loading effect */
+.loading {
+  color: #fffde7;
+  font-size: 1rem;
+  font-weight: 500;
+  animation: pulse 1.4s infinite;
+  margin-top: 15px;
+}
+/* Error Message */
+.error-text {
+  color: #ff7675;
+  font-weight: 600;
+  margin-top: 15px;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* --- Interaction Fix --- */
+.currency-module,
+.input-group,
+.input-group input,
+.input-group button {
+  position: relative;
+  z-index: 10;
+}
