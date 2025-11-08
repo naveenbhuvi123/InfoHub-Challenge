@@ -12,7 +12,7 @@ export default function CurrencyConverter() {
     try {
       setLoading(true); // start loader before request
       // fetching the response from the backend
-      const res = await axios.get(`/api/currency?amount=${amount}`); 
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/currency?amount=${amount}`);
       setData(res.data); // save fetched currency info
     } catch (err) {
       console.error("Currency fetch failed:", err.message); // log error message

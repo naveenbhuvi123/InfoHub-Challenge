@@ -30,7 +30,8 @@ export default function WeatherModule() {
   const fetchWeather = async (selectedCity) => {
     try {
       setLoading(true);
-      const res = await axios.get(`/api/weather?city=${selectedCity}`);
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/weather?city=${selectedCity}`)
+
       setData(res.data);
       setCity(selectedCity);
     } catch (err) {

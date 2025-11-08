@@ -10,7 +10,7 @@ export default function QuoteGenerator() {
   const fetchQuote = async () => {
     try {
       setLoading(true); // start loading
-      const res = await axios.get("/api/quote"); // fetch random quote
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/quote`); // fetch random quote
       setQuote(res.data.quote); // update quote
       setAuthor(res.data.author); // update author
     } catch (error) {
